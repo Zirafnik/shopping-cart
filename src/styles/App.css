@@ -1,6 +1,16 @@
 @font-face {
-    font-family: clarendon;
+    font-family: clarendon-bold;
     src: url(clarendon-bold.ttf);
+}
+
+@font-face {
+    font-family: clarendon-reg;
+    src: url(clarendon-regular.otf);
+}
+
+@font-face {
+    font-family: clarendon-light;
+    src: url(clarendon-light.otf);
 }
 
 body, html {
@@ -29,7 +39,7 @@ header {
 }   
 
 h1 {
-    font-family: clarendon;
+    font-family: clarendon-bold;
     font-size: 54px;
     padding: 10px;
     padding-left: 20px;
@@ -43,7 +53,7 @@ nav {
     display: flex;
     justify-content: space-around;
 
-    font-family: clarendon;
+    font-family: clarendon-bold;
     font-size: 20px;
 }
 
@@ -101,6 +111,7 @@ nav {
 }
 
 .footer-text {
+    font-family: clarendon-light;
     font-size: 22px;
     margin-right: 12px;
 }
