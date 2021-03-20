@@ -1,8 +1,16 @@
 import React from 'react';
+import {cars} from '../../data';
+import Card from '../Card';
 
-function Shop() {
+function Shop(props) {
+    const productCards= cars.map((car) => 
+        <Card key={car.model} car={car} />
+    );
+
     return(
-        <div className='main'>This is shop</div>
+        <div className='shop main'>
+            {productCards}
+        </div>
     );
 }
 

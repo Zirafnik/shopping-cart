@@ -13,6 +13,8 @@
     src: url(clarendon-light.otf);
 }
 
+/*https://stackoverflow.com/questions/17054158/css-100-height-with-header-and-footer*/
+
 body, html {
     height: 100%;
 }
@@ -57,18 +59,17 @@ nav {
     font-size: 20px;
 }
 
+.nav-links > li:hover {
+    transform: scale(1.08);
+}
+
 .main {
     flex: 1;
     height: 100%;
 }
 
 .home {
-    /* The image used */
     background-image: url("../images/volvo-bg.webp");
-
-    /* Full height */
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,6 +95,37 @@ nav {
 
 .home > button:hover {
     background-color: transparent;
+}
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url("../images/asfalt-light.png");
+    background-color: rgba(26, 26, 26, 0.829);
+    
+}
+
+.card {
+    height: 40%;
+    width: 55%;
+
+    background-color: white;
+    margin: 20px;
+    padding-bottom: 10px;
+
+    text-align: center;
+    font-size: 28px;
+}
+.card > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.model {
+    padding: 5px;
+    font-weight: 800;
 }
 
 .footer {
