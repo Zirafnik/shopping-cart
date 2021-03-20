@@ -1,0 +1,83 @@
+body, html {
+    height: 100%;
+}
+
+#root, .App {
+    height: 100%;
+}
+  
+header {
+    color: white;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+}   
+
+h1 {
+    font-size: 54px;
+    font-weight: 800;
+    padding: 10px;
+}
+
+.home {
+    /* The image used */
+    background-image: url("../images/volvo-bg.webp");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+}
+
+.home > button {
+    align-self: center;
+    justify-self: center;
+
+    font-size: 30px;
+
+    background-color: rgba(148, 148, 148, 0.747);
+    color: white;
+    border: 3px solid white;
+
+    height: auto;
+    width: auto;
+
+    cursor: pointer;
+}
+
+.home > button:hover {
+    background-color: transparent;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    
+    padding: 5px;
+
+    background-color: black;
+    color: white;
+}
+
+.footer-text {
+    font-size: 22px;
+    margin-right: 12px;
+}
+
+.github-image {
+    height: 35px;
+    width: 35px;
+}
+
+a {
+    outline: none;
+}
