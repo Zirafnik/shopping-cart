@@ -4,7 +4,7 @@ import Card from '../Card';
 
 function Shop(props) {
     const productCards= cars.map((car) => 
-        <Card key={car.model} car={car} />
+       <Card key={car.model} car={car} />
     );
 
     return(

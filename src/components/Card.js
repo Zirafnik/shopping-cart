@@ -1,14 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import images from '../imageGetter';
 
 function Card(props) {
     const {model, pic, price} = props.car;
-    console.log(pic);
     return (
         <div className='card'>
-            <img src={images[pic].default} alt={model}/>
-            <h2 className='model'>{model}</h2>
-            <p className='price'>$ {price}</p>
+             <Link to={`/shop/${model}`} >
+                <img className='car-img' src={images[pic].default} alt={model}/>
+                <h2 className='model'>{model}</h2>
+                <p className='price'>$ {price}</p>
+            </Link>
         </div>
     );
 }
