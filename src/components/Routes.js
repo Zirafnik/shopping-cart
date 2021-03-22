@@ -6,15 +6,15 @@ import Cart from './pages/Cart';
 import ProductDetail from './pages/Product';
 
 function Routes(props) {
-    
+    const site='/shopping-cart';
     return(
         <Switch>
-                <Route exact path='/'component={Home} />
-                <Route exact path='/shop' component={Shop} />
-                <Route exact path='/cart'>
+                <Route exact path={`${site}/`} component={Home} />
+                <Route exact path={`${site}/shop`} component={Shop} />
+                <Route exact path={`${site}/cart`}>
                     <Cart updateCartList={props.updateCartList} cart={props.cart} />
                 </Route>
-                <Route exact path='/shop/:id'>
+                <Route exact path={`${site}/shop/:id`}>
                     <ProductDetail incFunc={props.incFunc} addToCart={props.addToCart} />
                 </Route>
         </Switch>

@@ -6,7 +6,7 @@ function Header(props) {
 
     return(
         <header>
-            <h1><Link to='/'>Volvo</Link></h1>
+            <h1><Link to='/shopping-cart/'>Volvo</Link></h1>
             <Nav cartNum={props.cartNum} />
         </header>
     );

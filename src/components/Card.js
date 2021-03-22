@@ -6,7 +6,7 @@ function Card(props) {
     const {model, pic, price} = props.car;
     return (
         <div className='card'>
-             <Link to={`/shop/${model}`} >
+             <Link to={`/shopping-cart/shop/${model}`} >
                 <img className='car-img' src={images[pic].default} alt={model}/>
                 <h2 className='model'>{model}</h2>
                 <p className='price'>$ {price}</p>

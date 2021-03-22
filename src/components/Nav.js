@@ -7,13 +7,13 @@ function Nav(props) {
         <nav>
             <ul className='nav-links'>
                 <li>
-                    <Link to='/'>Home</Link>
+                    <Link to='/shopping-cart/'>Home</Link>
                 </li>
                 <li>
-                    <Link to='/shop'>Shop</Link>
+                    <Link to='/shopping-cart/shop'>Shop</Link>
                 </li>
                 <li>
-                    <Link to='/cart'>Cart ({props.cartNum})</Link>
+                    <Link to='/shopping-cart/cart'>Cart ({props.cartNum})</Link>
                 </li>
             </ul>
         </nav>
