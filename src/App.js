@@ -7,6 +7,26 @@ import Footer from './components/Footer';
 
 function App() {
   const [cartNum, setCartNum] = useState(0);
+  const [cart, setCart] = useState([]);
+
+  function addToCart(newItem) {
+    let count;
+    if(cart.some(obj => obj.model === newItem)) {
+      let newCart= [...cart];
+      let index= cart.findIndex(x => x.model === newItem);
+      let obj= cart.find(x => x.model === newItem);
+      count= obj.num + 1;
+      newCart[index]= {model: newItem, num: count};
+      setCart(newCart);
+    } else {
+      count = 1;
+      setCart([...cart, {model: newItem, num: count}]);
+    }
+  }
+  
+  function updateCartList(newItem, count) {
+    
+  }
 
   function incrementCartNum() {
     setCartNum(cartNum + 1);
@@ -23,7 +43,7 @@ function App() {
     <div className="App">
       <Header cartNum={cartNum} />
 
-      <Routes incFunc={incrementCartNum} />      
+      <Routes incFunc={incrementCartNum} addToCart={addToCart} />      
 
       <Footer />
     </div>
