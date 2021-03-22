@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function Nav() {
+function Nav(props) {
 
     return(
         <nav>
@@ -13,7 +13,7 @@ function Nav() {
                     <Link to='/shop'>Shop</Link>
                 </li>
                 <li>
-                    <Link to='/cart'>Cart (nic se)</Link>
+                    <Link to='/cart'>Cart ({props.cartNum})</Link>
                 </li>
             </ul>
         </nav>
