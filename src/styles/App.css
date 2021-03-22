@@ -178,6 +178,27 @@ nav {
     font-size: 28px;
 }
 
+.desc-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.add-to-cart {
+    height: 40px;
+    width: 140px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.87);
+    border: 1px solid black;
+    box-shadow: 10px 5px gray;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    transform: scale(1.05);
+}
+
 .footer {
     display: flex;
     flex-direction: row;

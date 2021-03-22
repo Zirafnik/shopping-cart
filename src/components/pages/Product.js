@@ -1,5 +1,5 @@
 import React from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import {cars} from '../../data';
 import images from '../../imageGetter';
 
@@ -19,7 +19,10 @@ function ProductDetail() {
                 <p className='text text-margin'>Price: {car.price}</p>
                 <p className='text text-margin'>Description:</p>
                 <p className='text-margin-small'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button className='desc-button text-margin'>Add to cart</button>
+                <div className='desc-buttons text-margin'>
+                    <Link><button className='add-to-cart'>Add to cart</button></Link>
+                    <Link to='/shop'><button className='add-to-cart'>Go back</button></Link>
+                </div>
             </div>
         </div>
     );
