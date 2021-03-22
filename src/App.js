@@ -24,8 +24,19 @@ function App() {
     }
   }
 
-  function updateCartList(newItem, count) {
-    
+  function updateCartList(e) {
+    let item= e.target.getAttribute('name');
+    let newCart= [...cart];
+    let index= cart.findIndex(x => x.model === item);
+    let count= Number(e.target.value);
+    let obj= cart.find(x => x.model === item);
+    newCart[index]= {model: item, num: count};
+
+    if(obj.num !== count) {
+      let diff= count - obj.num;
+      setCartNum(cartNum + diff);
+    }
+    setCart(newCart);
   }
 
   function incrementCartNum() {
@@ -43,7 +54,7 @@ function App() {
     <div className="App">
       <Header cartNum={cartNum} />
 
-      <Routes cart={cart} incFunc={incrementCartNum} addToCart={addToCart} />      
+      <Routes cart={cart} updateCartList={updateCartList} incFunc={incrementCartNum} addToCart={addToCart} />      
 
       <Footer />
     </div>

@@ -13,7 +13,7 @@ function CartItem(props) {
 
             <p>{props.model}</p>
 
-            <input className='cart-input' type='number' min='0' defaultValue={props.num} />
+            <input onChange={props.updateCartList} className='cart-input' type='number' min='0' name={props.model} defaultValue={props.num} />
 
             <p>$</p>
         </div>

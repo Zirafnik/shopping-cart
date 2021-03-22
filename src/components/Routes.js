@@ -12,7 +12,7 @@ function Routes(props) {
                 <Route exact path='/'component={Home} />
                 <Route exact path='/shop' component={Shop} />
                 <Route exact path='/cart'>
-                    <Cart cart={props.cart} />
+                    <Cart updateCartList={props.updateCartList} cart={props.cart} />
                 </Route>
                 <Route exact path='/shop/:id'>
                     <ProductDetail incFunc={props.incFunc} addToCart={props.addToCart} />

@@ -4,7 +4,7 @@ import CartItem from './CartItem';
 function Cart(props) {
 
     let cartItems = props.cart.map(item => 
-            <CartItem key={item.model} model={item.model} num={item.num} />
+            <CartItem updateCartList={props.updateCartList} key={item.model} model={item.model} num={item.num} />
         );
 
     return (
