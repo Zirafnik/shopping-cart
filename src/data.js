@@ -20,8 +20,8 @@ export const cars = [
         price: '32,000',
     },
     {
-        model: 'V90 Cross Country',
-        pic: 'v90cross-country.jpg',
-        price: '45,000',
+        model: 'XC60',
+        pic: 'xc60.jpg',
+        price: '38,000',
     },
 ]
