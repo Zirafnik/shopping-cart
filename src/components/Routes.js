@@ -11,9 +11,11 @@ function Routes(props) {
         <Switch>
                 <Route exact path='/'component={Home} />
                 <Route exact path='/shop' component={Shop} />
-                <Route exact path='/cart' component={Cart} />
+                <Route exact path='/cart'>
+                    <Cart cart={props.cart} />
+                </Route>
                 <Route exact path='/shop/:id'>
-                    <ProductDetail incFunc={props.incFunc} />
+                    <ProductDetail incFunc={props.incFunc} addToCart={props.addToCart} />
                 </Route>
         </Switch>
     );

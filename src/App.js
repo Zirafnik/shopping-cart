@@ -23,7 +23,7 @@ function App() {
       setCart([...cart, {model: newItem, num: count}]);
     }
   }
-  
+
   function updateCartList(newItem, count) {
     
   }
@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <Header cartNum={cartNum} />
 
-      <Routes incFunc={incrementCartNum} addToCart={addToCart} />      
+      <Routes cart={cart} incFunc={incrementCartNum} addToCart={addToCart} />      
 
       <Footer />
     </div>
