@@ -43,13 +43,6 @@ function App() {
     setCartNum(cartNum + 1);
   }
 
-  function decrementCartNum() {
-    if(cartNum === 0) {
-      return;
-    }
-    setCartNum(cartNum - 1);
-  }
-
   return (
     <div className="App">
       <Header cartNum={cartNum} />

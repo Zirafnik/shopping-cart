@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {cars} from '../../data';
 import images from '../../imageGetter';
 
 function CartItem(props) {
     let car = cars.filter(obj => obj.model === props.model);
+
+    let price= Number(car[0].price.slice(0,2) + car[0].price.slice(3));
+    let productPrice= price * props.num;
     
     return (
         <div className='cart-item'>
@@ -15,7 +18,7 @@ function CartItem(props) {
 
             <input onChange={props.updateCartList} className='cart-input' type='number' min='0' name={props.model} defaultValue={props.num} />
 
-            <p>$</p>
+            <p>${productPrice}</p>
         </div>
     );
 }
