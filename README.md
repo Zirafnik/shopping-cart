@@ -14,4 +14,6 @@ Live: https://zirafnik.github.io/shopping-cart/
 
 ![Screenshot No. 2](/screenshots/volvo-store-screenshot2.png)
 
+![Screenshot No. 4](/screenshots/volvo-store-screenshot4.png)
+
 ![Screenshot No. 3](/screenshots/volvo-store-screenshot3.png)
