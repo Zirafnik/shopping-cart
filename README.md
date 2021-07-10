@@ -1,6 +1,6 @@
 # Volvo Online Store
 
-This is a frontend example for an online store, with a Volvo car dealership theme.
+This is a frontend example of an online store, with a Volvo car dealership theme.
 
 It is built with **React** and uses **react-router-dom** for routing between different pages.
 
